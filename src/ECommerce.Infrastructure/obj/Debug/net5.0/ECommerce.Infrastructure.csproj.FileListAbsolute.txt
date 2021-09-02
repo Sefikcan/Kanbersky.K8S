@@ -1,0 +1,11 @@
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Infrastructure\bin\Debug\net5.0\ECommerce.Infrastructure.deps.json
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Infrastructure\bin\Debug\net5.0\ECommerce.Infrastructure.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Infrastructure\bin\Debug\net5.0\ref\ECommerce.Infrastructure.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Infrastructure\bin\Debug\net5.0\ECommerce.Infrastructure.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Infrastructure\obj\Debug\net5.0\ECommerce.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Infrastructure\obj\Debug\net5.0\ECommerce.Infrastructure.AssemblyInfoInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Infrastructure\obj\Debug\net5.0\ECommerce.Infrastructure.AssemblyInfo.cs
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Infrastructure\obj\Debug\net5.0\ECommerce.Infrastructure.csproj.CoreCompileInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Infrastructure\obj\Debug\net5.0\ECommerce.Infrastructure.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Infrastructure\obj\Debug\net5.0\ref\ECommerce.Infrastructure.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Infrastructure\obj\Debug\net5.0\ECommerce.Infrastructure.pdb

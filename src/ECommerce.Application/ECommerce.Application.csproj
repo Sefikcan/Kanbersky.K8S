@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\" />
+    <Folder Include="DTO\Response\" />
+    <Folder Include="DTO\Request\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Queries\" />
+  </ItemGroup>
+
+</Project>
