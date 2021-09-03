@@ -4,6 +4,17 @@
         <name>ECommerce.Api</name>
     </assembly>
     <members>
+        <member name="T:ECommerce.Api.Controllers.ProductsController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ECommerce.Api.Controllers.ProductsController.#ctor(MediatR.IMediator)">
+            <summary>
+            ctor
+            </summary>
+            <param name="mediator"></param>
+        </member>
         <member name="M:ECommerce.Api.Controllers.ProductsController.GetProducts">
             <summary>
             Get Products Info

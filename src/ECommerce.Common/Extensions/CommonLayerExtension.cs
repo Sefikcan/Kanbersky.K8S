@@ -1,6 +1,4 @@
-﻿using ECommerce.Common.Mappings.Abstract;
-using ECommerce.Common.Mappings.Concrete.AutoMapper;
-using ECommerce.Common.Settings.Concrete;
+﻿using ECommerce.Common.Settings.Concrete;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -8,7 +6,6 @@ using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
 using System.IO;
@@ -21,8 +18,6 @@ namespace ECommerce.Common.Extensions
     {
         public static IServiceCollection AddCommonLayer(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddSingleton<IKanberskyMapping, AutoMapping>();
-
             SwaggerSettings swaggerSettings = new SwaggerSettings();
             configuration.GetSection(nameof(SwaggerSettings)).Bind(swaggerSettings);
             services.AddSingleton(swaggerSettings);
