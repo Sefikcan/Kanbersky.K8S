@@ -6,10 +6,11 @@
 
   <ItemGroup>
     <Folder Include="Commands\" />
-    <Folder Include="DTO\Response\" />
     <Folder Include="DTO\Request\" />
-    <Folder Include="Extensions\" />
-    <Folder Include="Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ECommerce.Infrastructure\ECommerce.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -9,3 +9,7 @@ D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Infrastructure\
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Infrastructure\obj\Debug\net5.0\ECommerce.Infrastructure.dll
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Infrastructure\obj\Debug\net5.0\ref\ECommerce.Infrastructure.dll
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Infrastructure\obj\Debug\net5.0\ECommerce.Infrastructure.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Infrastructure\bin\Debug\net5.0\ECommerce.Common.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Infrastructure\bin\Debug\net5.0\ECommerce.Common.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Infrastructure\obj\Debug\net5.0\ECommerce.Infrastructure.csprojAssemblyReference.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Infrastructure\obj\Debug\net5.0\ECommerce.Infrastructure.csproj.CopyComplete
