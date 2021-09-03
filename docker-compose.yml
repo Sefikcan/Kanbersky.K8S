@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  productvdb:
+    image: postgres:latest
+
+  ecommerce.api:
+    image: ${DOCKER_REGISTRY-}ecommerceapi
+    build:
+      context: .
+      dockerfile: src/ECommerce.Api/Dockerfile
+
+volumes:
+  ecommerce-postgres-data:

@@ -79,21 +79,17 @@ namespace ECommerce.Common.Extensions
         /// <returns></returns>
         public static IApplicationBuilder UseCommonLayer(this IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider apiVersionDescriptionProvider)
         {
-            if (env.IsDevelopment())
+            app.UseSwagger(c =>
             {
-                app.UseDeveloperExceptionPage();
-                app.UseSwagger(c =>
+                c.RouteTemplate = "/swagger/{documentName}/swagger.json";
+            });
+            app.UseSwaggerUI(c =>
+            {
+                foreach (ApiVersionDescription desc in apiVersionDescriptionProvider.ApiVersionDescriptions)
                 {
-                    c.RouteTemplate = "/swagger/{documentName}/swagger.json";
-                });
-                app.UseSwaggerUI(c =>
-                {
-                    foreach (ApiVersionDescription desc in apiVersionDescriptionProvider.ApiVersionDescriptions)
-                    {
-                        c.SwaggerEndpoint($"/swagger/{desc.GroupName}/swagger.json", desc.GroupName.ToLowerInvariant());
-                    }
-                });
-            }
+                    c.SwaggerEndpoint($"/swagger/{desc.GroupName}/swagger.json", desc.GroupName.ToLowerInvariant());
+                }
+            });
 
             app.UseHttpsRedirection();
 

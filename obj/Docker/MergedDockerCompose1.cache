@@ -1,0 +1,30 @@
+services:
+  ecommerce.api:
+    build:
+      context: D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S
+      dockerfile: src/ECommerce.Api/Dockerfile
+    container_name: ecommerce.api
+    depends_on:
+      productvdb:
+        condition: service_started
+    image: ecommerceapi
+    ports:
+    - published: 8054
+      target: 80
+    restart: always
+  productvdb:
+    container_name: productvdb
+    environment:
+      POSTGRES_DB: products
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: administrator
+    image: postgres:latest
+    ports:
+    - published: 5432
+      target: 5432
+    restart: always
+    volumes:
+    - ecommerce-postgres-data:/var/lib/postgres:rw
+version: '3.4'
+volumes:
+  ecommerce-postgres-data: {}

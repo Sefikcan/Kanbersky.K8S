@@ -9,3 +9,4 @@ D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Common\obj\Debu
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Common\obj\Debug\net5.0\ECommerce.Common.dll
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Common\obj\Debug\net5.0\ref\ECommerce.Common.dll
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Common\obj\Debug\net5.0\ECommerce.Common.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Common\obj\Debug\net5.0\ECommerce.Common.csprojAssemblyReference.cache

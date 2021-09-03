@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  productvdb:
+    container_name: productvdb
+    restart: always
+    ports:
+        - 5432:5432
+    environment:
+        POSTGRES_USER: administrator
+        POSTGRES_PASSWORD: password
+        POSTGRES_DB: products
+    volumes:
+        - ecommerce-postgres-data:/var/lib/postgres 
+
+  ecommerce.api:
+    container_name: ecommerce.api
+    restart: always
+    ports:
+        - 8054:80
+    depends_on:
+        - productvdb

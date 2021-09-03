@@ -8,6 +8,9 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src
 COPY ["src/ECommerce.Api/ECommerce.Api.csproj", "src/ECommerce.Api/"]
+COPY ["src/ECommerce.Application/ECommerce.Application.csproj", "src/ECommerce.Application/"]
+COPY ["src/ECommerce.Infrastructure/ECommerce.Infrastructure.csproj", "src/ECommerce.Infrastructure/"]
+COPY ["src/ECommerce.Common/ECommerce.Common.csproj", "src/ECommerce.Common/"]
 RUN dotnet restore "src/ECommerce.Api/ECommerce.Api.csproj"
 COPY . .
 WORKDIR "/src/src/ECommerce.Api"

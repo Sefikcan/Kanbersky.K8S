@@ -9,6 +9,9 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace ECommerce.Api
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Startup
     {
         /// <summary>
@@ -20,6 +23,9 @@ namespace ECommerce.Api
             Configuration = configuration;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public IConfiguration Configuration { get; }
 
         /// <summary>
@@ -39,6 +45,7 @@ namespace ECommerce.Api
         /// </summary>
         /// <param name="app"></param>
         /// <param name="env"></param>
+        /// <param name="apiVersionDescriptionProvider"></param>
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider apiVersionDescriptionProvider)
         {
             app.UseCommonLayer(env, apiVersionDescriptionProvider);
