@@ -21,6 +21,13 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:ECommerce.Api.Controllers.ProductsController.CreateProduct(ECommerce.Application.DTO.Request.CreateProductRequestModel)">
+            <summary>
+            Create Product Operation
+            </summary>
+            <param name="createProductRequest"></param>
+            <returns></returns>
+        </member>
         <member name="T:ECommerce.Api.Program">
             <summary>
             

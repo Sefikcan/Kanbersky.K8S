@@ -14,17 +14,11 @@ services:
     restart: always
   productvdb:
     container_name: productvdb
-    environment:
-      POSTGRES_DB: products
-      POSTGRES_PASSWORD: password
-      POSTGRES_USER: administrator
-    image: postgres:latest
+    image: redis:latest
     ports:
-    - published: 5432
-      target: 5432
+    - published: 6379
+      target: 6379
     restart: always
-    volumes:
-    - ecommerce-postgres-data:/var/lib/postgres:rw
 version: '3.4'
 volumes:
   ecommerce-postgres-data: {}

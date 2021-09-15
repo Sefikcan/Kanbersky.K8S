@@ -3,14 +3,28 @@ services:
     build:
       context: D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S
       dockerfile: src/ECommerce.Api/Dockerfile
-    environment:
-      ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_URLS: https://+:443;http://+:80
+    container_name: ecommerce.api
+    depends_on:
+      productvdb:
+        condition: service_started
     image: ecommerceapi
     ports:
-    - target: 80
-    - target: 443
+    - published: 8054
+      target: 80
+    restart: always
+  productvdb:
+    container_name: productvdb
+    environment:
+      POSTGRES_DB: products
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: administrator
+    image: postgres:latest
+    ports:
+    - published: 5432
+      target: 5432
+    restart: always
     volumes:
-    - C:\Users\User\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
-    - C:\Users\User\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - ecommerce-postgres-data:/var/lib/postgres:rw
 version: '3.4'
+volumes:
+  ecommerce-postgres-data: {}

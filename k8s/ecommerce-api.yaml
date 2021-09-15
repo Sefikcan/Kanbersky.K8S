@@ -1,1 +1,29 @@
-apiVersion: apps/v1
+apiVersion: apps/v1                                       # İlgili yaml'ı oluşturmak için kullanacağımız sürümü belirtiyoruz.
+kind: deployment                                          # Ne tür bir obje oluşturacaksak burada belirtiyoruz.
+metadata:                                                 # yaml dosyamıza unique isim verdiğimiz kısım
+  name: ecommerce-api                                     #
+  labels:                                                 #
+    app: ecommerce-api                                    #
+spec:                                                     # Yaml'ımızın özelliklerini tanımlıyoruz. 
+  replicas: 1                                             # 
+  selector:                                               #
+    matchLabels:                                          #
+      app: ecommerce-api                                  #
+  template:                                               #
+    metadata:                                             #
+      labels:                                             #
+        app: ecommerce-api                                #
+    spec:                                                 #
+      containers:                                         #
+        - name: ecommerce-api                             # konteyner ismi
+          image: sefikcankanber/ecommerce-api:latest      # konteyner imajı, docker hub'da store edilen!
+      ports:                                              # 
+        - containerPort: 8054                             #
+      resources:                                        #
+          requests:                                       #
+            cpu: 100m                                     #
+            memory: 100Mi                                 #
+          limits:                                         #
+            cpu: 200m                                     #
+            memory: 200Mi                                 #
+---

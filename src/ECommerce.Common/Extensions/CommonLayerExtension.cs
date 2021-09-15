@@ -1,4 +1,6 @@
-﻿using ECommerce.Common.Settings.Concrete;
+﻿using ECommerce.Common.Caching.Abstract;
+using ECommerce.Common.Caching.Concrete.Redis;
+using ECommerce.Common.Settings.Concrete;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -18,6 +20,16 @@ namespace ECommerce.Common.Extensions
     {
         public static IServiceCollection AddCommonLayer(this IServiceCollection services, IConfiguration configuration)
         {
+            ProductDbSettings productDbSettings = new ProductDbSettings();
+            configuration.GetSection(nameof(ProductDbSettings)).Bind(productDbSettings);
+            services.AddSingleton(productDbSettings);
+
+            services.AddSingleton<ICacheService, RedisCacheService>();
+            services.AddStackExchangeRedisCache(opt =>
+            {
+                opt.Configuration = productDbSettings.Host;
+            });
+
             SwaggerSettings swaggerSettings = new SwaggerSettings();
             configuration.GetSection(nameof(SwaggerSettings)).Bind(swaggerSettings);
             services.AddSingleton(swaggerSettings);

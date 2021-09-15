@@ -5,13 +5,7 @@ services:
     container_name: productvdb
     restart: always
     ports:
-        - 5432:5432
-    environment:
-        POSTGRES_USER: administrator
-        POSTGRES_PASSWORD: password
-        POSTGRES_DB: products
-    volumes:
-        - ecommerce-postgres-data:/var/lib/postgres 
+        - "6379:6379" 
 
   ecommerce.api:
     container_name: ecommerce.api

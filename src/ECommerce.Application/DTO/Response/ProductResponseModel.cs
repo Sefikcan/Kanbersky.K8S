@@ -1,8 +1,10 @@
-﻿namespace ECommerce.Application.DTO.Response
+﻿using System;
+
+namespace ECommerce.Application.DTO.Response
 {
     public class ProductResponseModel
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         public string Name { get; set; }
 

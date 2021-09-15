@@ -1,0 +1,110 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: redisdb
+  labels:
+    app: redis
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: redis-pv
+  namespace: redisdb
+  labels:
+    app: redis
+spec:
+  capacity:
+    storage: 1Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
+  hostPath:
+    path: /data/redis
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: redis-pvc
+  namespace: redisdb
+  labels:
+    app: redis
+spec:
+  resources:
+    requests:
+      storage: 1Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-svc
+  namespace: redisdb
+  labels:
+    app: redis
+spec:
+  selector:
+    app: redis
+  ports:
+  - port: 6379
+    targetPort: 6379
+    protocol: TCP
+    nodePort: 32666
+  type: NodePort
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-deployment
+  namespace: redisdb
+  labels:
+    app: redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: redis
+    spec:
+      containers:
+      - name: redis
+        image: redis
+        # env:                                      # Environment değerlerini mysql imajında belirtilen isimler ile birlikte ekledik. Secret key'deki değerler daha önce oluşturduğumuz secret'tan gelir.
+        #   - name: REDIS_PASSWORD
+        #     valueFrom:
+        #       secretKeyRef:
+        #         name: redis-secret
+        #         key: REDIS_PASSWORD
+        #   - name: REDIS_USERNAME
+        #     valueFrom:
+        #       secretKeyRef:
+        #         name: redis-secret
+        #         key: REDIS_USERNAME
+        volumeMounts:
+          - name: redis-volume
+            mountPath: "/data"
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "500m"
+          limits:
+            memory: "512Mi"
+            cpu: "1000m"
+        ports:
+        - containerPort: 6379
+      volumes:
+        - name: redis-volume                    # Volume ismi
+          persistentVolumeClaim:
+            claimName: redis-pvc
+

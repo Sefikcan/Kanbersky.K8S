@@ -1,4 +1,6 @@
-﻿using ECommerce.Application.DTO.Response;
+﻿using ECommerce.Application.Commands;
+using ECommerce.Application.DTO.Request;
+using ECommerce.Application.DTO.Response;
 using ECommerce.Application.Queries;
 using Kanbersky.Common.Results.ApiResponses.Concrete;
 using MediatR;
@@ -38,6 +40,20 @@ namespace ECommerce.Api.Controllers
         {
             var response = await _mediator.Send(new GetProductsQuery());
             return ApiOk(response);
+        }
+
+        /// <summary>
+        /// Create Product Operation
+        /// </summary>
+        /// <param name="createProductRequest"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [MapToApiVersion("1.0")]
+        [ProducesResponseType(typeof(ProductResponseModel), (int)HttpStatusCode.Created)]
+        public async Task<IActionResult> CreateProduct(CreateProductRequestModel createProductRequest)
+        {
+            var response = await _mediator.Send(new CreateProductCommand(createProductRequest));
+            return ApiCreated(response);
         }
     }
 }

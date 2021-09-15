@@ -1,6 +1,5 @@
 using ECommerce.Application.Extensions;
 using ECommerce.Common.Extensions;
-using ECommerce.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
@@ -36,7 +35,6 @@ namespace ECommerce.Api
         {
             services
                     .AddCommonLayer(Configuration)
-                    .AddInfrastructureLayer(Configuration)
                     .AddApplicationLayer();
         }
 
