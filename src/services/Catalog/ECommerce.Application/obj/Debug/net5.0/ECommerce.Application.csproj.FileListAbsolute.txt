@@ -1,0 +1,17 @@
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Application\bin\Debug\net5.0\ECommerce.Application.deps.json
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Application\bin\Debug\net5.0\ECommerce.Application.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Application\bin\Debug\net5.0\ref\ECommerce.Application.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Application\bin\Debug\net5.0\ECommerce.Application.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Application\obj\Debug\net5.0\ECommerce.Application.csprojAssemblyReference.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Application\obj\Debug\net5.0\ECommerce.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Application\obj\Debug\net5.0\ECommerce.Application.AssemblyInfoInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Application\obj\Debug\net5.0\ECommerce.Application.AssemblyInfo.cs
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Application\obj\Debug\net5.0\ECommerce.Application.csproj.CoreCompileInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Application\obj\Debug\net5.0\ECommerce.Application.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Application\obj\Debug\net5.0\ref\ECommerce.Application.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Application\obj\Debug\net5.0\ECommerce.Application.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Application\bin\Debug\net5.0\ECommerce.Common.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Application\bin\Debug\net5.0\ECommerce.Infrastructure.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Application\bin\Debug\net5.0\ECommerce.Infrastructure.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Application\bin\Debug\net5.0\ECommerce.Common.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.K8S\src\ECommerce.Application\obj\Debug\net5.0\ECommerce.Application.csproj.CopyComplete

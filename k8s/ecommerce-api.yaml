@@ -19,7 +19,7 @@ spec:                                                     # Yaml'ımızın özel
           image: sefikcankanber/ecommerce-api:latest      # konteyner imajı, docker hub'da store edilen!
       ports:                                              # 
         - containerPort: 8054                             #
-      resources:                                        #
+      resources:                                          #
           requests:                                       #
             cpu: 100m                                     #
             memory: 100Mi                                 #
@@ -27,3 +27,31 @@ spec:                                                     # Yaml'ımızın özel
             cpu: 200m                                     #
             memory: 200Mi                                 #
 ---
+apiVersion: v1
+kind: service
+metadata:
+  name: ecommerce-api-service
+  labels:
+    app: ecommerce-api-service
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+  selector:
+    app: ecommerce-api
+    
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ecommerce-api-ingress
+  labels:
+    app: ecommerce-api-ingress
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /
+            backend:
+              serviceName: ecommerce-api-service
+              servicePort: 80
